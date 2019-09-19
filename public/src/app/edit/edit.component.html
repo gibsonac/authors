@@ -1,0 +1,18 @@
+<h1>Favorite authors</h1>
+<a [routerLink]="['/index']">Home</a>
+<p style="color: purple;">Edit this author:</p>
+<div class="row">
+    <div class="col">
+            <div *ngFor="let error of errors">
+                    <p style="color: red;">{{error}}</p>
+                </div>
+        <form (submit)="updateAuthor(theAuthor._id)">
+            <div class="form-group">
+                <label>Enter Name</label>
+                <input name="theAuthor.name" [(ngModel)]="theAuthor.name" type="text" class="form-control">
+            </div>
+            <a href="/index"><button type="button">Cancel</button></a> <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="col"></div>
+</div>
