@@ -10,7 +10,7 @@ import { HttpService } from './../http.service';
 export class NewComponent implements OnInit {
   theAuthor: any;
   haveErrors: boolean = false;
-  errors: any = '';
+  errors: any;
 
   constructor(
     private _route: ActivatedRoute,
